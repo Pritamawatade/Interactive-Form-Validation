@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Form Validation</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .form-group { margin-bottom: 15px; }
+        .error { color: red; font-size: 0.9em; }
+        .success { color: green; font-size: 0.9em; }
+        input:invalid { border-color: red; }
+        input:valid { border-color: green; }
+        button:disabled { background: #ccc; }
+    </style>
+</head>
+<body>
+    <h2>Register</h2>
+    <form id="registerForm" novalidate>
+        <div class="form-group">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required>
+            <div id="emailFeedback" class="error"></div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required>
+            <div id="passwordFeedback" class="error"></div>
+        </div>
+        <button type="submit" id="submitBtn" disabled>Submit</button>
+    </form>
+    <script src="form-validation.js"></script>
+</body>
+</html> 
